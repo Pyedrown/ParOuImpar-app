@@ -1,21 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import StyleApp from './style/StylesApp';
+import Input from './components/input/Input';
+/**
+ * Erro ao aplicar o Input no View
+ */
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={StyleApp.container}>
+        <StatusBar style="auto" />
+        <View>
+          <Input/>
+        </View>
+        <View>
+          <Text style={StyleApp.text}>Par ou Impar</Text>
+          <Text style={StyleApp.text}>Digite um valor para saber se é par ou impar</Text>
+        </View>
+      </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
